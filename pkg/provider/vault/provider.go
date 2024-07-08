@@ -153,7 +153,7 @@ func (p *Provider) initClient(ctx context.Context, c *client, client util.Client
 		client.AddHeader("X-Vault-Inconsistent", "forward-active-node")
 	}
 	if vaultSpec.Headers != nil{
-		for hKey, hValue := range provider.Headers {
+		for hKey, hValue := range vaultSpec.Headers {
 			client.AddHeader(hKey, hValue)
 		}
 	}
